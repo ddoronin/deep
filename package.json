@@ -1,0 +1,26 @@
+{
+  "name": "deep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddoronin/deep.git"
+  },
+  "author": "Dmitry Doronin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ddoronin/deep/issues"
+  },
+  "homepage": "https://github.com/ddoronin/deep#readme",
+  "dependencies": {
+    "bufferutil": "^1.3.0",
+    "node-uuid": "^1.4.7",
+    "prettyjson": "^1.2.1",
+    "redis": "^2.6.5",
+    "ws": "^2.0.1"
+  }
+}
