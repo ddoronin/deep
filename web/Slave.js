@@ -7,17 +7,17 @@ const subscriptions = require('./subscriptions');
 const createRedisClient = () => redis.createClient(process.env.REDIS_URL);
 
 class Slave {
-	constructor(port, onmessage) {
-		const wss = this._createWss(port, onmessage);
+	constructor(server, onmessage) {
+		const wss = this._createWss(server, onmessage);
 		this._createSubscriber(subscriptions.GLOBAL, wss);
 	}
 
-	_createWss(port, onmessage) {
+	_createWss(server, onmessage) {
 		const publisher = createRedisClient();
 		const wss = new WebSocket.Server({
 			perMessageDeflate: false,
 			clientTracking: true,
-			port: port
+			server
 		});
 		wss.on('connection', (ws)=> {
 			ws.id = uuid.v4();
