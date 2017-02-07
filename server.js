@@ -8,7 +8,7 @@ if (cluster.isMaster) {
 } else {
 	const HttpServer = require('./web/HttpServer');
 	const server = new HttpServer(__dirname).server;
-	const Slave = require('./web/Slave');
+	const Slave = require('./web/WssServer');
 	new Slave(server, (_, message) => _.send(`echo: ${message}`));
 	server.listen(PORT);
 }
