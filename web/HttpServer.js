@@ -1,8 +1,8 @@
+const _ = require('lodash');
 const path = require('path');
-const express = require('express');
 const serveStatic = require('serve-static');
 
-const setCustomCacheControl = (res, path) => {
+const setHeaders = (res, path) => {
 	if (serveStatic.mime.lookup(path) === 'text/html') {
 		// Custom Cache-Control for HTML files
 		res.setHeader('Cache-Control', 'public, max-age=0')
@@ -10,16 +10,13 @@ const setCustomCacheControl = (res, path) => {
 };
 
 class HttpServer {
-	constructor(dirname) {
-		this.app = express();
-		this.app.use(serveStatic(path.join(dirname, 'public')));
-		this.app.use(function (req, res) {
-			res.send({ msg: __dirname });
-		});
-	}
-
-	get server(){
-		return this.app;
+	constructor(app, wss, dirname) {
+		this.dist = path.join(dirname, 'public');
+		this.app = app.use(serveStatic(this.dist, {
+			maxAge: '1d',
+			setHeaders
+		}));
+		this.wss = wss;
 	}
 }
 
