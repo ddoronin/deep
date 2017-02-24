@@ -1,4 +1,11 @@
 const pretty = require('prettyjson');
+const _ = require('lodash');
+const logger = process.env.NODE_ENV === 'development' ? console : {
+	log: _.noop,
+	debug: _.noop,
+	info: _.noop,
+	error: _.noop
+};
 
 module.exports = class Worker {
 	constructor(cpu, worker) {
@@ -7,7 +14,7 @@ module.exports = class Worker {
 	}
 
 	log() {
-		Worker.print(this.cpu, this.worker, console);
+		Worker.print(this.cpu, this.worker, logger);
 	}
 
 	static print(cpu, worker, logger) {

@@ -1,0 +1,23 @@
+{
+  "name": "deep",
+  "version": "1.0.0",
+  "description": "The Deep",
+  "main": "src/app.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "test"
+  },
+  "author": "Dmitry Doronin",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "html-webpack-plugin": "^2.28.0",
+    "minimist": "^1.2.0",
+    "node-sass": "^4.5.0",
+    "path": "^0.12.7",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1"
+  }
+}

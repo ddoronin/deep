@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server"
+    "start": "coffee ./scripts/start.coffee",
+    "serve": "node server",
+    "postinstall": "echo 'Installation Completed'"
   },
   "repository": {
     "type": "git",
@@ -29,5 +31,9 @@
     "redis": "^2.6.5",
     "serve-static": "^1.11.2",
     "ws": "^2.0.1"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.12.4",
+    "shelljs": "^0.7.6"
   }
 }
