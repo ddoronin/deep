@@ -1,14 +1,9 @@
 require('shelljs/global');
 
 echo 'Building...'
+exec 'npm run serve', () ->
+  echo 'server run'
 
 cd './ui'
-exec 'npm run build', (code, output) ->
-  echo 'exit code #{code}'
-  echo output
-
-cd '../'
-echo 'npm run serve'
-exec 'npm run serve', (code, output) ->
-  echo 'exit code #{code}'
-  echo output
+exec 'npm run build', () ->
+  echo 'ui build successfully'
