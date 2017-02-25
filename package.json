@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/coffee ./scripts/start.coffee",
+    "start": "node scripts/start.js",
     "serve": "node server",
-    "postinstall": "echo 'Installation Completed'"
+    "postinstall": "echo 'Installation Completed'",
+    "compile-build-scripts": "coffee -c scripts/start.coffee"
   },
   "repository": {
     "type": "git",
