@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "coffee ./scripts/start.coffee",
+    "start": "./node_modules/.bin/coffee ./scripts/start.coffee",
     "serve": "node server",
     "postinstall": "echo 'Installation Completed'"
   },
