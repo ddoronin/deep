@@ -14,7 +14,7 @@ const setHeaders = (res, path) => {
 
 class HttpServer {
 	constructor(app, wss, dirname) {
-		this.dist = path.resolve(dirname, './public');
+		this.dist = path.resolve(dirname, '../../public');
 		console.log(`STATIC FILES ${this.dist}`);
 		this.app = app.use(serveStatic(this.dist, {
 			maxAge: '1d',
