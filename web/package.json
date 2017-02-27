@@ -1,0 +1,28 @@
+{
+  "name": "deep-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "serve": "node src/server",
+    "test": "test"
+  },
+  "author": "Dmitry Doronin",
+  "license": "ISC",
+  "dependencies": {
+    "bufferutil": "^1.3.0",
+    "compression": "^1.6.2",
+    "cookie-session": "^2.0.0-alpha.2",
+    "css-loader": "^0.26.1",
+    "express": "^4.14.1",
+    "helmet": "^3.4.0",
+    "lodash": "^4.17.4",
+    "node-uuid": "^1.4.7",
+    "path": "^0.12.7",
+    "prettyjson": "^1.2.1",
+    "redis": "^2.6.5",
+    "sass-loader": "^6.0.2",
+    "serve-static": "^1.11.2",
+    "ws": "^2.1.0"
+  }
+}
