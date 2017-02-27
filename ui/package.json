@@ -5,8 +5,13 @@
   "main": "src/app.js",
   "scripts": {
     "build": "webpack",
+    "serve": "node serve",
     "test": "test"
   },
   "author": "Dmitry Doronin",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "open": "0.0.5",
+    "webpack-dev-server": "^2.4.1"
+  }
 }
