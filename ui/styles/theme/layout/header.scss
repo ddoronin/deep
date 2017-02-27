@@ -1,0 +1,27 @@
+@import '../variables/main.scss';
+
+header {
+  padding: 2px;
+
+  h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 0 $black;
+  }
+  &.level1 {
+    background-color: $grey04;
+    color: $grey02;
+  }
+  &.level2 {
+    background-color: $grey05;
+    color: $grey03;
+  }
+  &.level3 {
+    background-color: $grey06;
+    color: $grey04;
+  }
+  &.level4 {
+    background-color: $grey07;
+    color: $grey05;
+  }
+}

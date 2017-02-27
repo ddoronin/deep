@@ -1,0 +1,31 @@
+// grey scale
+$white  : #FFFFFF;
+$grey01 : #E2E2E2;
+$grey02 : #C2C2C2;
+$grey03 : #8C8C8C;
+$grey04 : #666570;
+$grey05 : #4A4A52;
+$grey06 : #3C3C42;
+$grey07 : #2E2E33;
+$grey08 : #212124;
+$grey09 : #1A1A1C;
+$grey10 : #151516;
+$grey11 : #0A0A0A;
+$black  : #000000;
+
+// base colors
+$orange      : #FF9933;
+$orangeLight : lighten($orange, 20%);
+$orangeDark  : darken($orange, 20%);
+
+$red      : #F5475B;
+$redLight : lighten($red, 20%);
+$redDark  : darken($red, 20%);
+
+$green      : #39C46E;
+$greenLight : lighten($green, 20%);
+$greenDark  : darken($green, 20%);
+
+$blue      : #46A0F0;
+$blueLight : lighten($blue, 20%);
+$blueDark  : darken($blue, 20%);
