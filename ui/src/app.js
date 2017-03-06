@@ -22,7 +22,7 @@ class DeviceToolkit extends Component {
 		this.state = deviceMotion;
 
 		//const ws = new WebSocket('ws://localhost:3000/');
-		const ws = new WebSocket('ws://the-deep.herokuapp.com/');
+		const ws = new WebSocket('wss://the-deep.herokuapp.com/');
 
 		ws.onopen = function () {
 			console.log('ws is opened');
