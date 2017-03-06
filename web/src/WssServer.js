@@ -1,4 +1,3 @@
-const http = require('http');
 const WebSocket = require('ws');
 const redis = require('redis');
 const uuid = require('node-uuid');
