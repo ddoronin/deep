@@ -5,15 +5,16 @@
   "main": "src/app.js",
   "scripts": {
     "build": "webpack",
-    "serve": "node serve",
+    "serve": "node serve --progress",
     "test": "test"
   },
   "author": "Dmitry Doronin",
   "license": "ISC",
   "devDependencies": {
     "open": "0.0.5",
-    "webpack-dev-server": "^2.4.1",
-    "webpack": "^2.2.1"
+    "progress-bar-webpack-plugin": "^1.9.3",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
   },
   "dependencies": {
     "react": "^15.4.2",

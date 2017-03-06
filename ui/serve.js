@@ -4,12 +4,15 @@ const path = require('path');
 const webpack = require('webpack');
 const config = require('./webpack.config');
 const WebpackDevServer = require('webpack-dev-server');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const open = require('open');
 
 const uiDevPort = 8080;
-const webPort = process.env.PORT || 9000;
+const webPort = process.env.PORT || 3000;
 
-let server = new WebpackDevServer(webpack(config), {
+config.plugins = config.plugins.concat([new ProgressBarPlugin()]);
+
+let server = new WebpackDevServer(webpack(Object.assign(config)), {
 	contentBase: path.join(__dirname, './src'),
 	historyApiFallback: false,
 	hot: false,
