@@ -21,7 +21,6 @@ class HttpServer {
 			setHeaders
 		})).use(compression()).use(helmet());
 		this.wss = wss;
-
 		this.app.disable('x-powered-by');
 		var expiryDate = new Date(Date.now() + 60 * 60 * 1000); // 1 hour
 		this.app.use(session({
